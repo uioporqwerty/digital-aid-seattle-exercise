@@ -1,0 +1,36 @@
+{
+  "name": "digital-aid-seattle",
+  "version": "1.0.0",
+  "description": "Donation management system for Digital Aid Seattle",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "type-check": "cd frontend && npm run type-check && cd ../backend && npm run type-check"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "donation",
+    "management",
+    "shelter",
+    "next.js",
+    "fastify",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
